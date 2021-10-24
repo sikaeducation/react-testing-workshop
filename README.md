@@ -6,14 +6,15 @@ These are the core abstract concepts explored in the workshop:
 
 * One-way data flow
 * Componentization
+* Testing component-based apps
 
-These two ideas are explored through many different applications. Regardless of your background, you should come out of the workshop able to speak to these two concepts at a deeper level than you can now.
+These three ideas are explored through many different applications. Regardless of your background, you should come out of the workshop able to speak to these three concepts at a deeper level than you can now.
 
 ## Diagnostic
 
 Before you begin this workshop, do two things:
 
-1. Fork and clone the [vocabulary](https://github.com/sikaeducation/react-workshop-vocabulary) repo and attempt to fill out as much of the sheet as you can.
+1. Fork and clone the [vocabulary](https://github.com/sikaeducation/react-testing-vocabulary) repo and attempt to fill out as much of the sheet as you can.
 2. Fork and clone the [Google Search Results](https://github.com/sikaeducation/google-search-results-react) exercise and get as far as you can.
 
 It's OK if you can't get very far through either repo! You'll keep the vocabulary sheet updated throughout the workshop as you learn and refine, and the Google Search Results exercise helps me better understand where you're starting from.
