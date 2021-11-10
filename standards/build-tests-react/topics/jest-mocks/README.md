@@ -23,4 +23,4 @@ fetch.mockImplementationOnce(() => Promise.reject("Problem"))
 ```
 
 * [Blog: Mock Fetch in Jest](https://www.leighhalliday.com/mock-fetch-jest)
-
+* Don't reimplement logic

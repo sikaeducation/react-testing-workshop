@@ -29,6 +29,8 @@ Keep test files small, prefer them as a unit of organization over lots of descri
 
 Don't rely on test sequence. No mutable state!
 
+* AHA - Avoid hasty abstractions. In test code, use as little abstraction as possible. You should be able to see everything you need to run the test at once.
+
 ### Watch Out!
 
 * `describe()` functions can be nested within each other to create subgroups of tests. `test()` and `it()` functions always represent individual tests and cannot be nested.
