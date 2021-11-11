@@ -10,18 +10,20 @@ Equivalence partitions are always specific to the context. For example, a functi
 * Array with one string
 * Array with multiple strings
 
-### Strings
+How many partitions and boundaries you test for a piece of code should be proportional to how likely or critical a missed failure is, as well as how generic the code is. If piece of code being used incorrectly has safety implications, it's probably useful to assert behavior for every partition and every boundary. Similarly, a generic utility library that could be used in any number of contexts should provide cover a lot of partitions and boundaries. The rest of the time, it's OK to stick to partitions and boundaries that are the most common or express the purpose of the code the best.
 
-Some stock partitions for strings are:
+In formulating which boundaries and partitions you want to test, consider the following cases.
+
+### Strings
 
 * An empty string
 * A single character
 * Multiple characters
-* The maximum string length on the platform. The longest string supported by the JavaScript spec is 2^53, but in practice the number is much lower.
+* String with newlines
+* String with unicode characters
+* The maximum string length on the platform. The longest string supported by the JavaScript spec is 2^53, but in practice the number supported by each runtime is much lower.
 
 ### Numbers
-
-Some stock partitions for numbers are:
 
 * `-1`
 * `0`
@@ -52,19 +54,26 @@ The only legal values for Booleans are `true` and `false`.
 
 ### Arrays
 
-Some stock partitions for arrays are:
-
 * Empty array
 * Array with 1 element
 * Array with more than one element
 
 ### Objects
 
-Some stock partitions for objects are:
-
 * Empty object
 * Array with 1 element
 * Array with more than one element
+
+### Dates
+
+* Years, months, days, hours, and minutes
+* Time periods that cross between days, months, and years
+* Time periods that last less than a millisecond
+* Time periods that last more than 24 hours
+* December 31st, 2016 (contains a leap second)
+* February 29th, 2020 (leap day)
+* Second Sunday in March (Daylight Savings Time)
+* First Sunday in November (Daylight Savings Time)
 
 ## Boundaries
 
@@ -72,7 +81,7 @@ A boundary is where values change from one partition to another. For example, if
 
 ## Watch Out!
 
-* You may want to check all data types with `null` and `undefined` too
+* You may want to check all data types with `null` and `undefined` as well, especially in untyped environments.
 
 ## Additional Resources
 

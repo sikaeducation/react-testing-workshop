@@ -15,4 +15,4 @@ test("Something", () => {
 })
 ```
 
-If the `ComponentBeingTested` uses the `useContext` hook with `SomeContext`, it will have access to `"Hi"`.
+If the `ComponentBeingTested` uses the `useContext` hook with `SomeContext`, it will have access to `"Hi"` since the context provider is its tree.

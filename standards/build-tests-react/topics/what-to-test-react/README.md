@@ -1,45 +1,62 @@
 # What To Test: React Components
 
-* What does the component do with its props?
-* What other components does this component render, and what are their props?
-* What state does the component have, and under what circumstances does that change change?
-* What kinds of interactions can users have with the component?
-* What happens when child components invoke callbacks I give them?
+One of the most difficult things in testing is deciding what to test and what not to test. When testing React components, consider the following questions:
 
-## What Not To Test
+* **What does the component do with its props?** Statically display them? Invoke them? Use them to conditionally render things?
+* **What state does the component have, and under what circumstances does it change?** These usually point toward test cases.
+* **What other components does this component render, and what are their props?** What state do they have and how does it change?
+* **What kinds of interactions can users have with the component?** Are there things that can be clicked on, typed in, or changed?
+* **What happens when child components invoke callbacks?** Do the callbacks change state or otherwise alter what's rendered?
 
-* Static text
-* Don't test implementation details
-  * The names of functions and variables
-  * The APIs of internal functions
-* Don't duplicate your implementation code in the test
-* Don't test React
-* Don't test any third-party code
-* Anything that doesn't have an effect on a consumer
-* Inline styles that aren't bound to anything
-* Any external styles
-* Anything that isn't the concern of this component
+The answers to these questions will guide you toward the things you need to test. Some general guidelines:
 
 ## What To Test
 
-Test the contract of the component, which is the public API.
+Test the contract of the component, which is its public API.
 
-* Rendering
-  * Child components
-  * Props
-* Internal state
-  * Use equivalence partitions
-  * Pay attention to combinations of state
-* External state
-  * Props
-    * Use equivalence partitions
-    * Are they required or optional
-  * `context`
-  * Different parents or children
-* User actions - Clicks, keyboard input, dragging
-  * Internal state change is visible
-  * Prop functions are called correctly
-* Branching Logic
-  * Ternanies and boolean operators in templates
-  * Ifs and Switches in the function body
-* Styles that are bound to something
+### Props
+
+* You may want separate cases for any equivalence partitions and boundaries for those props
+* If a prop is optional, test what happens with and without it
+* Test different combinations of props
+* If the component has child components, make sure they render
+* Are there styles bound to props?
+
+### State
+
+* Don't try to test the state directly, always read and modify the state the way a user would
+* Look for conditional logic
+* Look for all the ways the state can be changed, including user actions and higher-order functions
+* If a component has multiple pieces of state, test combinations
+* Are there styles bound to state?
+
+### User Actions
+
+* What should happen when things are clicked, typed in, dragged, or otherwise used? How would that be observed by a user?
+* Look for network calls, higher-order functions being called, or context changing
+
+## What Not To Test
+
+Don't test things that aren't in the public contract or aren't owned by the component you're testing.
+
+### Implementation Details
+
+* Static content
+* Internal function, variable names, or signatures that aren't part of the component's API
+* The APIs of child components that are never used independently of the parent
+* The APIs of functions that are only used in this component
+* Anything that isn't visible to or interactable by a user
+* Internal styles that aren't bound to anything
+
+## External Code
+
+* Any external styles
+* Third-party libraries, including React
+* External web services
+* File systems
+* Utilities that aren't owned by the component
+
+## Watch Out!
+
+* If your tests break a lot as you're doing normal development, your tests are probably too coupled to the implementation. You should be able to refactor your code freely without any of your tests failing as long as the component's API and behavior stays the same.
+* Conversely, if you change the API of a component or its behavior, your tests _should_ fail. If they don't, your tests aren't giving you enough confidence that your code still works.

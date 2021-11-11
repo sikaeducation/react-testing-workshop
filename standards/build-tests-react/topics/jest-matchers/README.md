@@ -1,5 +1,19 @@
 # Jest: Basic Matchers
 
+Matchers assert things about the values being examined by `expect`. The most simple matcher is `.toEqual`:
+
+```js
+expect(4).toEqual(4)
+```
+
+Using the other matchers has several benefits:
+
+* They keep logic out of your tests. For example, using the `.resolves` chainer reduces the likelihood of making a mistake manually resolving a promise and asserting the resolved value.
+* They make error messages more expressive.
+* They serve as better documentation because they read more like sentences and less like code.
+
+Jest comes with a large number of matchers. These are some of the most common and useful:
+
 ## Simple Values
 
 | Matcher | Purpose |

@@ -1,7 +1,5 @@
 # Simple Testing with Jest
 
-## What is a simple test?
-
 The simplest tests are for pure functions that accept primitive values.
 
 ```js
@@ -16,7 +14,7 @@ test("add returns the sum of two positive integers", () => {
 
 Import a function, call it with appropriate arguments, assert that the return value of the function was what you expected it to be.
 
-### Pure Functions
+## Pure Functions
 
 A function is pure if it:
 
@@ -52,7 +50,7 @@ const newCount = increment(initialCount, 1)
 console.log(newCount) // 1
 ```
 
-In this example, `increment` is a pure function. It can be tested directly without any other context.
+In this example, `increment` is a pure function. It can be tested directly without any other context. This is one of the reasons that writing tests and code at the same time encourages testable code while trying to add tests after the fact is often difficult.
 
 ## Organizing Tests
 
