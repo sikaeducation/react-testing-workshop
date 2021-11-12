@@ -8,7 +8,7 @@ A component needs 3 things:
 
 ## Names
 
-Vue component names follow a set of rules:
+React component names follow a set of rules:
 
 * **Components should be multiple words**. To ensure compatibility with the web component spec, component names should be at least two words.
 * <strong>No snake_case, no camelCase, only PascalCase</strong>. There are no circumstances where snake_case or camelCase are appropriate for component names, stick to PascalCase for component names.

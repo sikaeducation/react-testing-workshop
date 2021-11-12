@@ -23,7 +23,7 @@ import {
 
 | Action | Notes |
 | --- | --- |
-| `type(inputElement, text)` | The text can also a variety special characters to represent keys that can't be displayed like enter. Accepts an options object as a third argument that can be used to add time between keystrokes. |
+| `type(inputElement, text)` | The text can also a variety special characters to represent keys that can't be displayed, like enter. Accepts an options object as a third argument that can be used to add time between keystrokes. |
 | `upload(inputElement, file)` |  Mock files can be created using the `File` API |
 | `clear(inputElement)` | Removes the contents of an `<input />` or `<textarea>` |
 | `selectOptions(selectElement, values)` | Given an array of string values, selects each matching option from a `<select>` element |

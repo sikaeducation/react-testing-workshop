@@ -6,19 +6,19 @@ One of the most difficult things in testing is deciding what to test and what no
 * **What state does the component have, and under what circumstances does it change?** These usually point toward test cases.
 * **What other components does this component render, and what are their props?** What state do they have and how does it change?
 * **What kinds of interactions can users have with the component?** Are there things that can be clicked on, typed in, or changed?
-* **What happens when child components invoke callbacks?** Do the callbacks change state or otherwise alter what's rendered?
+* **What happens when child components invoke functions?** Do the functions change state or otherwise alter what's rendered?
 
 The answers to these questions will guide you toward the things you need to test. Some general guidelines:
 
 ## What To Test
 
-Test the contract of the component, which is its public API.
+Test the public API of the component.
 
 ### Props
 
 * You may want separate cases for any equivalence partitions and boundaries for those props
 * If a prop is optional, test what happens with and without it
-* Test different combinations of props
+* Test different combinations of props, including their partitions and boundaries
 * If the component has child components, make sure they render
 * Are there styles bound to props?
 
@@ -37,12 +37,12 @@ Test the contract of the component, which is its public API.
 
 ## What Not To Test
 
-Don't test things that aren't in the public contract or aren't owned by the component you're testing.
+Don't test things that aren't in the public API or aren't owned by the component you're testing.
 
 ### Implementation Details
 
 * Static content
-* Internal function, variable names, or signatures that aren't part of the component's API
+* Internal functions, variable names, or signatures that aren't part of the component's API
 * The APIs of child components that are never used independently of the parent
 * The APIs of functions that are only used in this component
 * Anything that isn't visible to or interactable by a user

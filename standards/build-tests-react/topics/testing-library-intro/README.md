@@ -6,7 +6,7 @@ Testing Library is intended to be a generic base that can be extended for differ
 
 ## Installing
 
-To install the most version of Testing Library (vanilla DOM app with the Jest test framework):
+To install the most basic version of Testing Library (vanilla DOM app with the Jest test framework):
 
 ```bash
 npm install --save-dev @testing-library/jest-dom

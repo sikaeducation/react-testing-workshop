@@ -81,7 +81,7 @@ describe("Bank ledger", () => {
 }
 ```
 
-Extracting this kind of test setup into `before` hooks is common in BDD, but hurts test readability. Application code generally strives to be DRY and abstract out all shared code. Since tests need to function as documentation, it's often desirable to repeat yourself so that everything needed to understand the test is in one place. For example, compare these two approaches:
+Extracting this kind of test setup into `before` hooks is common in BDD, but hurts test readability. Application code generally strives to be DRY and abstract out all shared code. In contrast, since tests need to function as documentation it's desirable to repeat yourself often so that everything needed to understand the test is in one place. For example, compare these two approaches:
 
 ```js
 describe("Bank ledger", () => {
@@ -118,7 +118,7 @@ test("Bankledgers with positive balances don't allow withdrawals over the balanc
 })
 ```
 
-Both test suites are identical, but the second one is much easier to follow. Don't be afraid of repeating yourself and avoid hasty abstractions.
+Both test suites are the same, but the second one is much easier to follow. Don't be afraid of repeating yourself and avoid hasty abstractions.
 
 ## Within Tests
 
@@ -161,7 +161,7 @@ Use whichever style has the least noise and the most clarity for that particular
 ### Watch Out!
 
 * Keep test files small, prefer them as a unit of organization over lots of describes and nesting.
-* `describe()` and `context()` are identical, as are `it()` and `test()`. `describe` and `it` come from RSpec and a testing philosophy called BDD. `context` and `test` are more agnostic. Use whichever one makes your tests easier to read.
+* `describe()` and `context()` are the same, as are `it()` and `test()`. `describe` and `it` come from RSpec and a testing philosophy called BDD. `context` and `test` are more agnostic. Use whichever one makes your tests easier to read.
 * `describe()` and `context()` functions can be nested within each other to create subgroups of tests. `test()` and `it()` functions always represent individual tests and cannot be nested.
 * Any one test can have as many assertions as you like, but be careful about asserting too many things in one test. Each test should represent one reason why the system could fail. If you use multiple assertions in a test, they should all fail for the same reason.
 * There are `afterEach` and `afterAll` hooks, but they should be avoided as there is no guarantee they will run. Initial conditions for each test should be ensured either in the test itself or in `beforeEach` and `beforeAll` hooks.

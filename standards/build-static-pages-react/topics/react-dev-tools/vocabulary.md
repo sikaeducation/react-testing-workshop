@@ -1,4 +1,4 @@
-Component
-Browser Extension
-Element Inspector
-Console
+* Component
+* Browser Extension
+* Element Inspector
+* Console

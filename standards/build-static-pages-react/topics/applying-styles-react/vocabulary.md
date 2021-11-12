@@ -1,6 +1,6 @@
-React
-CSS
-Component
-Stylesheet
-Namespacing
-Webpack
+* React
+* CSS
+* Component
+* Stylesheet
+* Namespacing
+* Webpack

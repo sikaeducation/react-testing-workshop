@@ -1,7 +1,7 @@
-React
-Iteration
-JSX
-HTML Template
-JavaScript: `.map`
-React: Keys
-Array Index
+* React
+* Iteration
+* JSX
+* HTML Template
+* JavaScript: `.map`
+* React: Keys
+* Array Index

@@ -1,3 +1,3 @@
-Component Hierarchy
-Component
-Application State
+* Component Hierarchy
+* Component
+* Application State

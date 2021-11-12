@@ -39,8 +39,9 @@ Jest is setup to run from an `npm` script:
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^27.2.0",
-  },
+    "jest": "^27.2.0"
+  }
+}
 ```
 
 Jest can now be run with `npm test` on the command line. By default Jest will try to execute any file ending in `.test.js`.
@@ -82,7 +83,7 @@ When the tests are run, the name of the test will display with a red X or green 
 
 ## Watch Out!
 
-* Jest tests are technically Node.js code, even if your project isn't otherwise a Node.js project. That means you need to use `require` syntax to import modules instead of `import`. The code you're testing can export modules with either the standard `export` syntax or Node's `module.export` syntax.
+* Jest tests are technically Node.js code, even if your project isn't otherwise a Node.js project. That means you may need to use `require` syntax to import modules instead of `import` unless you've configured your project to use `import`/`export` syntax. The code you're testing can export modules with either the standard `export` syntax or Node's `module.export` syntax.
 * `test` and `expect` don't need to imported, Jest makes them available when it runs the tests.
 
 ## Additional Resources

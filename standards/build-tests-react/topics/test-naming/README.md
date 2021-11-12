@@ -6,7 +6,7 @@ Test names should describe:
 * What behavior it should be have
 * Under which conditions
 
-Traditional test names fall into 3 different styles: Simple, RSpec, and JUnit.
+Traditional test names fall into 3 different styles: Simple, RSpec, and xUnit.
 
 ## Naming Styles
 
@@ -38,7 +38,7 @@ end
 
 This case should be read as as "Math#add should return sum when given two positive integers". By convention, static methods start with `.` and instance methods start with `#`. Additionally, it's common to start each test case with the word "should".
 
-### XUnit-style Naming
+### xUnit-style Naming
 
 Frameworks like `JUnit` and `xUnit.NET` are designed for OOP code, and each test case is written as an instance method. By convention, the names are written in three sections separated by underscores, such as `MethodBeingTested_ExpectedResult_Condition`.
 

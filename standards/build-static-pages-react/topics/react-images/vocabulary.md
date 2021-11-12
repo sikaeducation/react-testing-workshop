@@ -1,6 +1,6 @@
-React
-URL
-CRA
-Favicon
-Static file
-Webpack
+* React
+* URL
+* CRA
+* Favicon
+* Static file
+* Webpack

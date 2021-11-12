@@ -1,8 +1,8 @@
-React
-Deployment
-SPA
-Static Website
-JSX
-Node Package
-Components
-Transpilation
+* React
+* Deployment
+* SPA
+* Static Website
+* JSX
+* Node Package
+* Components
+* Transpilation

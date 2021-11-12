@@ -17,7 +17,7 @@ Tests can be written at any point in the development process, but there are some
 * **Test are documentation**. Tests are executable examples of how your code works. Since it's not possible for your tests and your actual code to get out of sync, tests end up more reliable than prose documentation.
 * **Tests run your code.** One of the most time-consuming parts of developing software is manually testing code as you're writing it. Tests do this automatically.
 
-## Why Not Write Tests?
+## Why Don't Developers Write Tests?
 
 If automated tests are so valuable, why do developers resist using them?
 
