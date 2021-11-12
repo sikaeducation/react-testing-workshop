@@ -6,8 +6,6 @@
   * [Exercises](topics/spa-state-management-intro/exercises.md)
 * [Intro to React Context](topics/react-context-intro)
   * [Exercises](topics/react-context-intro/exercises.md)
-* [React Context: Setting State](topics/react-context-setting-state)
-  * [Exercises](topics/react-context-setting-state/exercises.md)
 
 ## Assessment
 
