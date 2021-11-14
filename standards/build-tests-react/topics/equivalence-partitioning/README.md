@@ -2,13 +2,20 @@
 
 Equivalence partitions are ranges of values that can be treated the same for testing purposes. For example, given a function that adds two numbers together, it may be valuable to check that it can add `1` to `2`. However, once you've verified that, verifying that `1` can be added to `3` is unlikely to reveal any new insights into the code. That's because `2` and `3` are part of the same equivalence partition.
 
-## Equivalence Partitions
+## Equivalence Partitions and Boundaries
 
 Equivalence partitions are always specific to the context. For example, a function that should accept an array of no more than 10 string elements might have the following partitions:
 
 * Empty array
-* Array with one string
-* Array with multiple strings
+* Array with between 1 and 10 strings
+* Array with 11 or more strings
+
+A boundary is where values change from one partition to another. For example, the above case has the following boundaries:
+
+* Array with 1 string (boundary between empty and 1-10)
+* Array with 10 strings (boundary between 1-10 and 11 or more)
+
+Boundaries are also useful to test because they're the most likely place for mistakes to occur.
 
 How many partitions and boundaries you test for a piece of code should be proportional to how likely or critical a missed failure is, as well as how generic the code is. If piece of code being used incorrectly has safety implications, it's probably useful to assert behavior for every partition and every boundary. Similarly, a generic utility library that could be used in any number of contexts should provide cover a lot of partitions and boundaries. The rest of the time, it's OK to stick to partitions and boundaries that are the most common or express the purpose of the code the best.
 
@@ -74,10 +81,6 @@ The only legal values for Booleans are `true` and `false`.
 * February 29th, 2020 (leap day)
 * Second Sunday in March (Daylight Savings Time)
 * First Sunday in November (Daylight Savings Time)
-
-## Boundaries
-
-A boundary is where values change from one partition to another. For example, if one partition is the numbers `1` through `5` and another partition is the numbers `6` through `10`, the boundaries are `1`, `5`, `6`, and `10`.
 
 ## Watch Out!
 
