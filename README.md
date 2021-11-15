@@ -68,3 +68,4 @@ What happens in between those times is variable and mostly determined by your co
 * [Warmups](https://github.com/sikaeducation/november-warmups)
 * [Counter Demo Code](https://github.com/kylecoberly/react-counter-nimble-demo)
 * [Google Search Results Exercise](https://github.com/sikaeducation/google-search-results-react)
+* [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)
