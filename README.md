@@ -71,3 +71,6 @@ What happens in between those times is variable and mostly determined by your co
 * [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)
 * [React Context Pokemon Demo](https://github.com/kylecoberly/react-context-pokemon-demo)
 * [Presentation and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+* [`fetch` Demo](https://codesandbox.io/s/bitter-sound-o5xxd?file=/src/index.js:44-379)
+* [`useEffect` Demo](https://codesandbox.io/s/wizardly-chandrasekhar-f6lpb?file=/src/App.js)
+* [Heroku Composition Demo](https://github.com/kylecoberly/heroku-composition-demo)
