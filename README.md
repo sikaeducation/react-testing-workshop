@@ -70,3 +70,4 @@ What happens in between those times is variable and mostly determined by your co
 * [Google Search Results Exercise](https://github.com/sikaeducation/google-search-results-react)
 * [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)
 * [React Context Pokemon Demo](https://github.com/kylecoberly/react-context-pokemon-demo)
+* [Presentation and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
