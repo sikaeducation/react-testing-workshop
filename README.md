@@ -74,3 +74,5 @@ What happens in between those times is variable and mostly determined by your co
 * [`fetch` Demo](https://codesandbox.io/s/bitter-sound-o5xxd?file=/src/index.js:44-379)
 * [`useEffect` Demo](https://codesandbox.io/s/wizardly-chandrasekhar-f6lpb?file=/src/App.js)
 * [Heroku Composition Demo](https://github.com/kylecoberly/heroku-composition-demo)
+* [React Suspense for Fetching](https://reactjs.org/docs/concurrent-mode-suspense.html)
+* [React Query](https://react-query.tanstack.com/)
